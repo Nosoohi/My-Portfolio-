@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daniel Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/6ca149c97a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="header">
+    <div class="container">
+      <nav>
+        <a href="#" class="logo">Daniel.</a>
+        <ul id="sidemenu">
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <!-- <li><a href="#">Portfolio</a></li> -->
+          <li><a href="#Contact">Contact</a></li>
+          <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+        </ul>
+      <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+      </nav>
+      <div class="header-text">
+        <p>website developer / Programer</p>
+        <h1>Hi I'm  <span>Daniel</span><br>Welcome to my <br>Portfolio</h1>
+      </div>
+    </div>
+  </div>
+  <!----------------------about--------------------->
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="about edited.png">
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p> I'm a rising junior at Nova Scotia Community College, immersing myself in the dynamic realm of programming and web development. My journey revolves around the art of crafting captivating websites that not only boast eye-catching designs but also deliver exceptional user experiences.</p>
+
+           <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+            <p class="tab-links" onclick="opentab('expersince')">Expersince</p>
+            <p class="tab-links" onclick="opentab('education')">Education</p>
+           </div>
+           <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li><span>Python Programer</span><br>Junior Python developer</li>
+              <li><span>Data developer</span><br>Data Base Designer / MySQL</li>
+              <li><span>Web Developert</span><br>HTML/CSS</li>
+            </ul>
+           </div>
+           <div class="tab-contents" id="expersince">
+            <ul>
+              <li><span>2023-current</span><br>Python traing at NSCC collage </li>
+              <li><span>2023-current</span><br>Data Base Designe training EDL/DDL and MySQ at NSCC collageL</li>
+              <li><span>2023-current</span><br>HTML/CSS traing at NSCC collage</li>
+            </ul>
+           </div>
+           <div class="tab-contents" id="education">
+           <ul>
+            <li><span>2022-23</span><br>High School Diploma</li>
+            <li><span>current</span><br>IT Programing Studnet at NSCC collage</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- ------------------Services----------------- ---->
+  <div id="services">
+    <div class="container">
+      <h1 class="sub-title">My Services</h1>
+      <div class="services-list">
+        <div>
+          <i class="fa-solid fa-code"></i>
+          <h2>Web Design</h2>
+          <p>Web design, using HTML and CSS, blends structure and style for compelling online experiences. HTML organizes content, while CSS adds visual appeal with colors and fonts. Together, they create seamless and professional websites, merging functionality with aesthetics.
+           </p>
+             <!-- <a href="#">Learn more</a> -->
+        </div>
+        <div>
+          <i class="fa-solid fa-database"></i>
+          <h2>Data Base </h2>
+          <p>Data design involves organizing information in databases efficiently. Using DDL, EDL, and MySQL, we define structures, refine conceptual entities, and ensure secure and streamlined data management for optimal storage and retrieval.
+          </p>
+             <!-- <a href="#">Learn more</a> -->
+        </div>
+        <div>
+          <i class="fa-brands fa-python"></i>
+          <h2>Python</h2>
+          <p>Python is a versatile and easy-to-use programming language known for its simplicity and readability. It allows developers to express ideas in fewer lines of code, making it efficient and collaborative. Python is widely used in web development, data analysis, AI, and automation . 
+           </p>
+             <!-- <a href="#">Learn more</a> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- --------------Contact----------------- -->
+  <div id="Contact">
+    <div class="container">
+      <div class="row">
+        <div class="contact-left">
+          <h1 class="sub-title">Contact Me</h1>
+          <p><i class="fa-solid fa-paper-plane"></i>DanieNosoohi@gmail.com</p>
+          <p><i class="fa-solid fa-square-phone"></i>902-448-6606</p>
+          <div class="social-icons">
+            <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.twitter.com"><i class="fa-brands fa-square-twitter"></i></a>
+            <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+          <a href="Danial Nosoohi Resume - Daniel Nosoohi.pdf" download class="btn btn2">Download CV</a>
+        </div>
+        <div class="contact-right">
+          <form name="submit-to-google-sheet">
+            <input type="text" name="Name" placeholder="Your name" required>
+            <input type="email" name="Email" placeholder="Your Email" required>
+            <textarea name="Massage"  rows="6" placeholder="Your Massage"></textarea>
+            <button type="submit" class="btn btn2">Submit</button>
+          </form>
+          <span id="msg">Thank you!</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+      }
+        for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+    }
+  </script>
+
+  <script>
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+      sidemenu.style.right = "0";
+    }
+    function closemenu(){
+      sidemenu.style.right = "-200px";
+    }
+
+  </script>
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbw22zFPphCM-hEJzX310JAvavHxPNI8AcKZQ2HHNxUUKY8QNU9d1DqF2_cWCzvaz77ilA/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response =>{
+          msg.innerHTML = "massage sent successfully"
+          setTimeout(function(){
+            msg.innerHTML = ""
+          },5000)
+          form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
